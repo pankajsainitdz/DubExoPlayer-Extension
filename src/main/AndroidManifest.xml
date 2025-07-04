@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dubexoplayer.extension">
+
+    <!-- Required permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    
+    <!-- Optional permissions for better video playback -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    
+    <!-- Hardware features -->
+    <uses-feature 
+        android:name="android.hardware.wifi" 
+        android:required="false" />
+    <uses-feature 
+        android:name="android.hardware.touchscreen" 
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        android:hardwareAccelerated="true"
+        android:largeHeap="true"
+        android:usesCleartextTraffic="true">
+        
+        <!-- ExoPlayer related activities -->
+        <activity
+            android:name="com.google.android.exoplayer2.ui.PlayerControlView"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+            
+    </application>
+
+</manifest>
